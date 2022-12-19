@@ -1,0 +1,38 @@
+Problem-Solution:-
+  
+Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
+
+Example 1:
+Input: num = 38
+Output: 2
+Explanation: The process is
+38 --> 3 + 8 --> 11
+11 --> 1 + 1 --> 2 
+Since 2 has only one digit, return it.
+
+Example 2:
+Input: num = 0
+Output: 0
+
+Constraints:
+0 <= num <= 231 - 1
+
+Follow up: Could you do it without any loop/recursion in O(1) runtime?
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+Solution:-
+  
+class Solution {
+public:
+    int addDigits(int num) {
+        return (num -1)%9 +1;
+    }
+};
+
+Explaination:-
+  
+As we can see every number for example 38 from example 1, (38-1)%9+1 = 2 and 38 --> 3+8=11, 11 --> 1+1 = 2.
+for other number like 47, (47-1)%9+1 = 2; and 47 --> 4+7 = 11, 11 --> 1+1 = 2.
+So, the formula which is generated is (num-1)%9+1...
+  
